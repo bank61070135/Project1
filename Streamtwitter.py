@@ -3,7 +3,6 @@ from tweepy.streaming import StreamListener
 from tweepy import OAuthHandler
 from tweepy import Stream
 import csv
-import json
 import re
 
 consumer_key = "3II162EiHwgcNCSV17YW0Ykof"
@@ -19,7 +18,8 @@ class MyListener(StreamListener):
     def on_data(self, data):
         print(data)
         hashtags = [hashtag.lower() for hashtag in re.split('\s+', data) if len(hashtag)>0 and hashtag[0]=="#"]
-        with open('python.csv', 'a') as f:
+        hashtags_clean = 
+        with open('python.csv', 'a', encoding='utf8') as f:
             f.write(str(hashtags))
             f.write("\n")
     def on_error(self, status):
@@ -27,5 +27,5 @@ class MyListener(StreamListener):
 
 if __name__ == "__main__":
     stream = Stream(auth, MyListener())
-    stream.filter(track=["#"])
+    stream.filter(track=["#bnk48"])
             
