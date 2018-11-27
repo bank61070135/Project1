@@ -1,3 +1,6 @@
 # Project1
 
-เราจะทำอะไร ? ฟฟรก่ฟกสฟ่ก
+# ⌚ What is Realtime ln Twitter
+Realtime ln Twitter คือ เว็ปไซต์ที่สามารถค้าหา hashtag
+
+
