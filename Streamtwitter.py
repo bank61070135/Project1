@@ -2,6 +2,7 @@ import tweepy
 from tweepy.streaming import StreamListener
 from tweepy import OAuthHandler
 from tweepy import Stream
+import csv
 
 consumer_key = "3II162EiHwgcNCSV17YW0Ykof"
 consumer_secret = "CZonbTz3tao9tZkQVVCvQscf5Yml0ohV3H2n16JYktg4bY73z4"
@@ -14,6 +15,8 @@ auth.set_access_token(access_token, access_token_secret)
 class MyListener(StreamListener):
     def on_data(self, data):
         print(data)
+        with open("tweets.csv", "a") as f:
+            writer = csv.writer(f)
         return True
     def on_error(self, status):
         print(status)
