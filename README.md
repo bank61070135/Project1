@@ -1,4 +1,4 @@
-<img src="https://digitalmarketingwow.com/wp-content/uploads/2018/05/twitter-block1.png">
+<img src="images/logo.png">
  
 ## ⌚ Realtime ln Twitter ทำอะไรได้บ้าง ?
 - ค้นหา hashtag ใน Twitter ที่สนใจ
