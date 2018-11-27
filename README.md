@@ -1,4 +1,6 @@
-<img src="images/logo.png">
+<p align="center">
+<img src="images/logo.png" weight="800" height="200">
+ </p>
  
 ## ⌚ Realtime ln Twitter ทำอะไรได้บ้าง ?
 - ค้นหา hashtag ใน Twitter ที่สนใจ
