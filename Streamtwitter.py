@@ -32,7 +32,7 @@ class MyListener(StreamListener):
             def tokenize(s):
                 return tokens_re.findall(s)
             hashtags = [hashtag for hashtag in tokenize(data) if len(hashtag)>1 and hashtag[0]=="#"]
-            with open('python.csv', 'a', encoding='utf8') as f:
+            with open('Hashtags.csv', 'a', encoding='utf8') as f:
                 f.write(str(hashtags))
                 f.write("\n")
         except BaseException as e:
