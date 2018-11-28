@@ -17,8 +17,7 @@ api = tweepy.API(auth)
 class MyListener(StreamListener):
     def on_data(self, data):
         print(data)
-        hashtags = [hashtag.lower() for hashtag in re.split('\s+', data) if len(hashtag)>0 and hashtag[0]=="#"]
-        hashtags_clean = 
+        
         with open('python.csv', 'a', encoding='utf8') as f:
             f.write(str(hashtags))
             f.write("\n")
@@ -27,5 +26,5 @@ class MyListener(StreamListener):
 
 if __name__ == "__main__":
     stream = Stream(auth, MyListener())
-    stream.filter(track=["#bnk48"])
+    stream.filter(track=["#"])
             
