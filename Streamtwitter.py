@@ -17,14 +17,31 @@ api = tweepy.API(auth)
 class MyListener(StreamListener):
     def on_data(self, data):
         print(data)
-        
-        with open('python.csv', 'a', encoding='utf8') as f:
-            f.write(str(hashtags))
-            f.write("\n")
+        try:
+            regex_str = [
+                r'<[^>]+>',
+                r'(?:@[\w_]+)',
+                r"(?:\#+[\w_]+[\w\'_\-]*[\w_]+)",
+                r'http[s]?://(?:[a-z]|[0-9]|[$-_@.&amp;+]|[!*\(\),]|(?:%[0-9a-f][0-9a-f]))+',
+                r'(?:(?:\d+,?)+(?:\.?\d+)?)',
+                r"(?:[a-z][a-z'\-_]+[a-z])",
+                r'(?:[\w_]+)',
+                r'(?:\S)'
+                ]
+            tokens_re = re.compile(r'('+'|'.join(regex_str)+')', re.VERBOSE | re.IGNORECASE)
+            def tokenize(s):
+                return tokens_re.findall(s)
+            hashtags = [hashtag for hashtag in tokenize(data) if len(hashtag)>1 and hashtag[0]=="#"]
+            with open('python.csv', 'a', encoding='utf8') as f:
+                f.write(str(hashtags))
+                f.write("\n")
+        except BaseException as e:
+            print("Error on_data: %s" % str(e))
+        return True
     def on_error(self, status):
         print(status)
 
 if __name__ == "__main__":
     stream = Stream(auth, MyListener())
-    stream.filter(track=["#"])
+    stream.filter(track=["#python"])
             
