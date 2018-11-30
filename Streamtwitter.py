@@ -1,4 +1,3 @@
-
 import tweepy
 from tweepy.streaming import StreamListener
 from tweepy import OAuthHandler
@@ -21,7 +20,7 @@ dict_hashtags = {}
 
 class MyListener(StreamListener):
     def on_data(self, data):
-        print(data)
+        #print(data)
         try:
             regex_str = [
                 r'<[^>]+>',
@@ -46,12 +45,13 @@ class MyListener(StreamListener):
 
             df_hashtags =  pd.DataFrame.from_dict(dict_hashtags, orient='index', columns=['Count'])
             df_hashtags = df_hashtags.sort_values(by='Count', ascending=False)
+            df_hashtags = df_hashtags.head(5)
             print(df_hashtags)
-            with open('Hashtags.json', 'a', encoding='utf8') as f:
+            """with open('Hashtags.json', 'a', encoding='utf8') as f:
                 f.write(str(dict_hashtags))
                 f.write("\n")
                 f.write(str(df_hashtags))
-                f.write("\n")
+                f.write("\n")"""
         except BaseException as e:
             print("Error on_data: %s" % str(e))
         return True
@@ -62,3 +62,4 @@ class MyListener(StreamListener):
 if __name__ == "__main__":
     stream = Stream(auth, MyListener())
     stream.filter(track=["#java"])
+            
