@@ -178,7 +178,7 @@ img::-moz-selection {
 header.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 56px);
-  background-color: skyblue;
+  background-image: url("../images/background.jpg");
   background-position: center center;
   background-size: cover;
 }
