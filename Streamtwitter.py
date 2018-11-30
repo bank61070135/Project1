@@ -5,6 +5,7 @@ from tweepy import Stream
 import csv
 import re
 import pandas as pd
+import json
 
 consumer_key = "3II162EiHwgcNCSV17YW0Ykof"
 consumer_secret = "CZonbTz3tao9tZkQVVCvQscf5Yml0ohV3H2n16JYktg4bY73z4"
@@ -19,7 +20,7 @@ dict_hashtags = {}
 
 class MyListener(StreamListener):
     def on_data(self, data):
-        #print(data)
+        print(data)
         try:
             regex_str = [
                 r'<[^>]+>',
@@ -45,7 +46,7 @@ class MyListener(StreamListener):
             df_hashtags =  pd.DataFrame.from_dict(dict_hashtags, orient='index', columns=['Count'])
             df_hashtags = df_hashtags.sort_values(by='Count', ascending=False)
             print(df_hashtags)
-            with open('Hashtags.csv', 'a', encoding='utf8') as f:
+            with open('Hashtags.json', 'a', encoding='utf8') as f:
                 f.write(str(dict_hashtags))
                 f.write("\n")
                 f.write(str(df_hashtags))
@@ -59,5 +60,5 @@ class MyListener(StreamListener):
 
 if __name__ == "__main__":
     stream = Stream(auth, MyListener())
-    stream.filter(track=["#python"])
+    stream.filter(track=["#java"])
             
