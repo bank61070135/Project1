@@ -1,5 +1,5 @@
 <p align="center">
-<img src="images/logo.png" weight="1800" height="700">
+<img src="images/banner.png" weight="1800" height="700">
  </p>
  
 ## ⌚ Realtime ln Twitter ทำอะไรได้บ้าง ?
@@ -12,8 +12,7 @@
 
 ## สมาชิกในทีม!
 
-| Tables        | Are           |  Are          |Cool           |
-| ------------- |:-------------:|:-------------:|:-------------:|
 | 61070037      | 61070135      | 61070155      | 61070263      |
+|:-------------:|:-------------:|:-------------:|:-------------:|
 | Charinrat     | Patcharapuek  | Pattaranan    | Akkrapol      |
-| zebra stripes | are neat      |    $1         | asdadadaddas  |
+
