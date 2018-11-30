@@ -10,8 +10,8 @@
 - python 3 (ดึงค่า api จาก twitter)
 - javascript
 
-| Tables        | Are           | Cool  |
+## สมาชิกในทีม!
+
 | ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+|      |  |  |
+| 61070037     | 61070135      | 61070155      | 61070263      |
