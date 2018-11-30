@@ -1,5 +1,5 @@
 <p align="center">
-<img src="images/banner.png" weight="1800" height="700">
+<img src="images/banner.png" weight="700" height="700">
  </p>
  
 ## ⌚ Realtime ln Twitter ทำอะไรได้บ้าง ?
