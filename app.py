@@ -2,10 +2,8 @@ import tweepy
 from tweepy.streaming import StreamListener
 from tweepy import OAuthHandler
 from tweepy import Stream
-import csv
 import re
 import pandas as pd
-import json
 
 consumer_key = "3II162EiHwgcNCSV17YW0Ykof"
 consumer_secret = "CZonbTz3tao9tZkQVVCvQscf5Yml0ohV3H2n16JYktg4bY73z4"
@@ -20,7 +18,6 @@ dict_hashtags = {}
 
 class MyListener(StreamListener):
     def on_data(self, data):
-        #print(data)
         try:
             regex_str = [
                 r'<[^>]+>',
@@ -43,15 +40,10 @@ class MyListener(StreamListener):
                 else:
                     dict_hashtags[i][0] += 1
 
-            df_hashtags =  pd.DataFrame.from_dict(dict_hashtags, orient='index', columns=['Count'])
+            df_hashtags =  pd.DataFrame.from_dict(dict_hashtags, orient='index', columns=['hashtags', 'Count'])
             df_hashtags = df_hashtags.sort_values(by='Count', ascending=False)
             df_hashtags = df_hashtags.head(5)
             print(df_hashtags)
-            """with open('Hashtags.json', 'a', encoding='utf8') as f:
-                f.write(str(dict_hashtags))
-                f.write("\n")
-                f.write(str(df_hashtags))
-                f.write("\n")"""
         except BaseException as e:
             print("Error on_data: %s" % str(e))
         return True
