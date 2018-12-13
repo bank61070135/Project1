@@ -9,6 +9,7 @@ from IPython import display
 import time
 from datetime import datetime, timedelta
 from matplotlib.ticker import MaxNLocator
+import matplotlib.animation as animation
 
 consumer_key = "3II162EiHwgcNCSV17YW0Ykof"
 consumer_secret = "CZonbTz3tao9tZkQVVCvQscf5Yml0ohV3H2n16JYktg4bY73z4"
@@ -49,16 +50,18 @@ class MyListener(StreamListener):
                 hashtags = [hashtag.lower() for hashtag in tokenize(data) if len(hashtag)>1 and hashtag[0]=="#"]
                 for i in hashtags:
                     if i not in dict_hashtags:
-                        dict_hashtags[i] = [i, 1]
+                        dict_hashtags[i] = [1]
                     else:
-                        dict_hashtags[i][1] += 1
+                        dict_hashtags[i][0] += 1
 
-                df_hashtags =  pd.DataFrame.from_dict(dict_hashtags, orient='index', columns=['hashtag', 'count'])
+                df_hashtags =  pd.DataFrame.from_dict(dict_hashtags, orient='index', columns=['count'])
                 df_hashtags = df_hashtags.sort_values(by='count', ascending=False)
-                results = df_hashtags.head(5)
-                print(results)
-
-                fig, ax = plt.subplots(1,1,figsize=(12,6))
+                #results = df_hashtags.head(5)
+                print(df_hashtags)
+                with open('Hashtags.txt', 'w', encoding='utf8') as f:
+                    f.write(str(df_hashtags))
+                    f.close()
+                """fig, ax = plt.subplots(1,1,figsize=(12,6))
                 results.plot(kind='bar', x='hashtag', y='count', legend=False, ax=ax)
                 ax.set_title("Top 5 hashtags")
                 ax.set_xlabel("Hashtag", fontsize=18)
@@ -69,7 +72,7 @@ class MyListener(StreamListener):
                 display.clear_output(wait=True)
                 print("start time:", start_time.strftime('%Y-%m-%d %H:%M:%S'))
                 print("stream time:", stream_time.strftime('%Y-%m-%d %H:%M:%S'))
-                plt.show()
+                plt.show()"""
         except BaseException as e:
             print("Error on_data: %s" % str(e))
         return True
