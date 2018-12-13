@@ -4,11 +4,20 @@ from tweepy import OAuthHandler
 from tweepy import Stream
 import re
 import pandas as pd
+from flask import Flask, render_template
+from pusher import Pusher
+import requests, json, atexit, time, plotly, plotly.graph_objs as go
+
+app = Flask(__name__)
 
 consumer_key = "3II162EiHwgcNCSV17YW0Ykof"
 consumer_secret = "CZonbTz3tao9tZkQVVCvQscf5Yml0ohV3H2n16JYktg4bY73z4"
 access_token = "1349083645-NoM2NjgwsSqPPrT3DN8PgKMa4VFV8VGpV7qVX1H"
 access_token_secret = "wI0pzHELnIIMzTZPLm4Pn7Gj01SVL5zniJaDPM2ZcW6SG"
+
+@app.route("/")
+def index():
+    return render_template("index.html")
 
 auth = OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
@@ -40,7 +49,7 @@ class MyListener(StreamListener):
                 else:
                     dict_hashtags[i][0] += 1
 
-            df_hashtags =  pd.DataFrame.from_dict(dict_hashtags, orient='index', columns=['hashtags', 'Count'])
+            df_hashtags =  pd.DataFrame.from_dict(dict_hashtags, orient='index', columns=['Count'])
             df_hashtags = df_hashtags.sort_values(by='Count', ascending=False)
             df_hashtags = df_hashtags.head(5)
             print(df_hashtags)
