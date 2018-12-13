@@ -5,11 +5,8 @@ from tweepy import Stream
 import re
 import pandas as pd
 import matplotlib.pyplot as plt
-from IPython import display
-import time
-from datetime import datetime, timedelta
-from matplotlib.ticker import MaxNLocator
 import matplotlib.animation as animation
+from matplotlib import style
 
 consumer_key = "3II162EiHwgcNCSV17YW0Ykof"
 consumer_secret = "CZonbTz3tao9tZkQVVCvQscf5Yml0ohV3H2n16JYktg4bY73z4"
@@ -26,53 +23,54 @@ dict_hashtags = {}
 class MyListener(StreamListener):
     def on_data(self, data):
         try:
-            start_time = datetime.now()
-            stream_period = 60
-            finish_time = start_time + timedelta(minutes=stream_period)
-            while datetime.now() < finish_time:
-                wait_time = 10
-                time.sleep(wait_time)
-                stream_time = datetime.now()
-                print(data)
-                regex_str = [
-                    r'<[^>]+>',
-                    r'(?:@[\w_]+)',
-                    r"(?:\#+[\w_]+[\w\'_\-]*[\w_]+)",
-                    r'http[s]?://(?:[a-z]|[0-9]|[$-_@.&amp;+]|[!*\(\),]|(?:%[0-9a-f][0-9a-f]))+',
-                    r'(?:(?:\d+,?)+(?:\.?\d+)?)',
-                    r"(?:[a-z][a-z'\-_]+[a-z])",
-                    r'(?:[\w_]+)',
-                    r'(?:\S)'
-                    ]
-                tokens_re = re.compile(r'('+'|'.join(regex_str)+')', re.VERBOSE | re.IGNORECASE)
-                def tokenize(s):
-                    return tokens_re.findall(s)
-                hashtags = [hashtag.lower() for hashtag in tokenize(data) if len(hashtag)>1 and hashtag[0]=="#"]
-                for i in hashtags:
-                    if i not in dict_hashtags:
-                        dict_hashtags[i] = [1]
-                    else:
-                        dict_hashtags[i][0] += 1
+            regex_str = [
+                r'<[^>]+>',
+                r'(?:@[\w_]+)',
+                r"(?:\#+[\w_]+[\w\'_\-]*[\w_]+)",
+                r'http[s]?://(?:[a-z]|[0-9]|[$-_@.&amp;+]|[!*\(\),]|(?:%[0-9a-f][0-9a-f]))+',
+                r'(?:(?:\d+,?)+(?:\.?\d+)?)',
+                r"(?:[a-z][a-z'\-_]+[a-z])",
+                r'(?:[\w_]+)',
+                r'(?:\S)'
+                ]
+            tokens_re = re.compile(r'('+'|'.join(regex_str)+')', re.VERBOSE | re.IGNORECASE)
+            def tokenize(s):
+                return tokens_re.findall(s)
+            hashtags = [hashtag.lower() for hashtag in tokenize(data) if len(hashtag)>1 and hashtag[0]=="#"]
+            for i in hashtags:
+                if i not in dict_hashtags:
+                    dict_hashtags[i] = [i, 1]
+                else:
+                    dict_hashtags[i][1] += 1
 
-                df_hashtags =  pd.DataFrame.from_dict(dict_hashtags, orient='index', columns=['count'])
-                df_hashtags = df_hashtags.sort_values(by='count', ascending=False)
-                #results = df_hashtags.head(5)
-                print(df_hashtags)
-                with open('Hashtags.txt', 'w', encoding='utf8') as f:
-                    f.write(str(df_hashtags))
-                    f.close()
-                """fig, ax = plt.subplots(1,1,figsize=(12,6))
-                results.plot(kind='bar', x='hashtag', y='count', legend=False, ax=ax)
-                ax.set_title("Top 5 hashtags")
-                ax.set_xlabel("Hashtag", fontsize=18)
-                ax.set_ylabel("Count", fontsize=18)
-                ax.set_xticklabels(ax.get_xticklabels(), {"fontsize":14}, rotation=30)
-                ax.yaxis.set_major_locator(MaxNLocator(integer=True))
-                plt.yticks(fontsize=14)
-                display.clear_output(wait=True)
-                print("start time:", start_time.strftime('%Y-%m-%d %H:%M:%S'))
-                print("stream time:", stream_time.strftime('%Y-%m-%d %H:%M:%S'))
-                plt.show()"""
+            df_hashtags =  pd.DataFrame.from_dict(dict_hashtags, orient='index', columns=['hashtag', 'count'])
+            df_hashtags = df_hashtags.sort_values(by='count', ascending=False)
+            results = df_hashtags.head(5)
+            #df = results.values.tolist()
+            with open('Hashtags.csv', 'w', encoding='utf8') as f:
+                f.write(str(results))
+                f.close()
+            """style.use('fivethirtyeight')
+            
+            fig = plt.figure()
+            ax1 = fig.add_subplot(1, 1, 1)
+
+            print(results)
+            def animate(i):
+                graph_data = open('Hashtags.txt', 'r').read()
+                lines = list(graph_data)
+                xs = []
+                ys = []
+                for i in lines:
+                    xs.append(i[0])
+                    ys.append(i[1])
+                ax1.clear()
+                ax1.plot(xs, ys)
+
+            ani = animation.FuncAnimation(fig, animate, interval=1000)
+                
+            plt.show()"""
+                
         except BaseException as e:
             print("Error on_data: %s" % str(e))
         return True
