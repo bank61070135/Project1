@@ -43,6 +43,10 @@ h6 {
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
 }
 
+.nav-fonts {
+  font-family: 'VT323', monospace;
+}
+
 .bg-primary {
   background-color: #F05F40 !important;
 }
@@ -178,7 +182,7 @@ img::-moz-selection {
 header.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 56px);
-  background-image: url("../img/header.jpg");
+  background-image: url("../img/background.png");
   background-position: center center;
   background-size: cover;
 }
@@ -316,4 +320,21 @@ header.masthead p {
 .btn-primary:active, .btn-primary:focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(240, 95, 64, 0.5) !important;
   box-shadow: 0 0 0 0.2rem rgba(240, 95, 64, 0.5) !important;
+}
+
+#footer {
+  background-color: #212529;
+  text-align: right;
+  height: 20%;
+  color: rgb(230, 225, 225);
+  margin-right: 100px;
+  font-family: 'Kanit', sans-serif;
+}
+
+#footer2{
+  background-color: aqua;
+  text-align: center;
+  height: 15%;
+  color: #212529;
+  font-family: 'Kanit', sans-serif;
 }
