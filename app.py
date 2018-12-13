@@ -46,30 +46,30 @@ class MyListener(StreamListener):
             df_hashtags =  pd.DataFrame.from_dict(dict_hashtags, orient='index', columns=['hashtag', 'count'])
             df_hashtags = df_hashtags.sort_values(by='count', ascending=False)
             results = df_hashtags.head(5)
-            #df = results.values.tolist()
-            with open('Hashtags.csv', 'w', encoding='utf8') as f:
-                f.write(str(results))
+            df = results.values.tolist()
+            with open('Hashtags.txt', 'w', encoding='utf8') as f:
+                f.write(str(df))
                 f.close()
-            """style.use('fivethirtyeight')
+            style.use('fivethirtyeight')
             
             fig = plt.figure()
             ax1 = fig.add_subplot(1, 1, 1)
 
-            print(results)
+            #print(results)
             def animate(i):
                 graph_data = open('Hashtags.txt', 'r').read()
-                lines = list(graph_data)
                 xs = []
                 ys = []
-                for i in lines:
+                """for i in list(graph_data):
+                    print(i)
                     xs.append(i[0])
-                    ys.append(i[1])
+                    ys.append(i[1])"""
                 ax1.clear()
                 ax1.plot(xs, ys)
 
             ani = animation.FuncAnimation(fig, animate, interval=1000)
                 
-            plt.show()"""
+            plt.show()
                 
         except BaseException as e:
             print("Error on_data: %s" % str(e))

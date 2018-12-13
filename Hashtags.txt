@@ -1,1 +1,1 @@
-[['#bnk48', 3], ['#jennisbnk48', 3], ['#itsjennistime', 1], ['#votejennisnow', 1]]
+[['#kaimookbnk48', 2], ['#bnk48', 2]]
