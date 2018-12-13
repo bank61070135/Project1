@@ -340,13 +340,17 @@ header.masthead p {
 }
 
 #footer {
-    background-color: sandybrown;
-    text-align: center;
+    background-color: #212529;
+    text-align: right;
     height: 20%;
+    color: rgb(230, 225, 225);
+    padding-right: 30px;
+    font-family: 'Kanit', sans-serif;
   }
-#footerv2 {
+  #footer2{
     background-color: aqua;
     text-align: center;
-    height: 20%;
-}
-
+    height: 15%;
+    color: #212529;
+    font-family: 'Kanit', sans-serif;
+  }
