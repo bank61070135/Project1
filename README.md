@@ -12,6 +12,7 @@
 
 ## สมาชิกในทีม!
 
+| ![alt text](https://github.com/bank61070135/Project1/images/063.jpg "037") |
 | 61070037      | 61070135      | 61070155      | 61070263      |
 |:-------------:|:-------------:|:-------------:|:-------------:|
 | Charinrat     | Patcharapuek  | Pattaranan    | Akkrapol      |
