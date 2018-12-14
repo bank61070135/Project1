@@ -11,8 +11,8 @@
 - javascript
 
 ## สมาชิกในทีม!
-
-| ![alt text](https://github.com/bank61070135/Project1/blob/master/images/063.jpg "037") |
+|<a href=""><img scrc="/images/063.jpg"|
+|:-------------:|:-------------:|:-------------:|:-------------:|
 | 61070037      | 61070135      | 61070155      | 61070263      |
 |:-------------:|:-------------:|:-------------:|:-------------:|
 | Charinrat     | Patcharapuek  | Pattaranan    | Akkrapol      |
