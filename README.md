@@ -11,7 +11,7 @@
 - javascript
 
 ## สมาชิกในทีม!
-|<a href=""><img src="https://github.com/bank61070135/Project1/blob/master/images/063.jpg"></a>|
+|<a href=""><img src="https://github.com/bank61070135/Project1/blob/master/images/063.jpg" width="100" height="100"></a>|
 |:-------------:|:-------------:|:-------------:|:-------------:|
 | 61070037      | 61070135      | 61070155      | 61070263      |
 |:-------------:|:-------------:|:-------------:|:-------------:|
