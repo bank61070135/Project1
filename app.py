@@ -49,6 +49,7 @@ class MyListener(StreamListener):
             df = results.values.tolist()
             dict_json = {}
             for i in df:
+                i[0] = i[0].lstrip("#")
                 dict_json[i[0]] = i[1]
             dict_json = str(dict_json)
             dict_json = dict_json.replace("'", '"')
