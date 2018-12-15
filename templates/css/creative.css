@@ -358,10 +358,10 @@ header.masthead p {
 
 
 .avatar {
-  margin-left: 20px;
+  text-align: center;
 }
 .text-img {
-  margin-left: 70px;
+  text-align: center;
   font-family: 'Kanit', sans-serif;
 }
 img.user {
