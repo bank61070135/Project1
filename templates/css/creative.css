@@ -55,6 +55,11 @@ h6 {
   background-color: #212529 !important;
 }
 
+.text-header{
+  text-shadow: rgba(33, 37, 41, 0.1);
+
+}
+
 .text-faded {
   color: rgba(255, 255, 255, 0.7);
 }
@@ -243,6 +248,9 @@ header.masthead p {
   max-width: 400px;
 }
 
+.text-header{
+  text-shadow: #212529;
+}
 .portfolio-box {
   position: relative;
   display: block;
@@ -342,17 +350,16 @@ header.masthead p {
 }
 
 #footer {
+  background-color: #212529;
   text-align: center;
   height: 20%;
-  color: #212529;
   font-family: 'Kanit', sans-serif;
 }
 
-#footer2 {
-  background-color: #93b1c0;
+#footer2{
   text-align: center;
   height: 125%;
-  color: white;
+  color: #212529;
   font-family: 'Kanit', sans-serif;
 }
 
@@ -412,3 +419,4 @@ img.user:hover {
   cursor: pointer;
   animation: bounceOut .4s linear;
 }
+
