@@ -8,7 +8,7 @@
 - วิเคราะห์ผล hashtag เเละ เเสดงผลที่ผู้ใช้ ใช้งานซ้ำกันมากที่สุด
  ## 🌐 ภาษาที่นำมาใช้งาน
 - python 3 (ดึงค่า api จาก twitter)
-- javascript
+- Chart.js (ทำกราฟ)
 
 ## สมาชิกในทีม!
 |<a href=""><img src="https://github.com/bank61070135/Project1/blob/master/images/063.jpg" width="120" height="120"></a>|<a href=""><img src="https://github.com/bank61070135/Project1/blob/master/images/135.jpg" width="120" height="120"></a>|<a href=""><img src="https://github.com/bank61070135/Project1/blob/master/images/155.jpg" width="120" height="120"></a>|<a href=""><img src="https://github.com/bank61070135/Project1/blob/master/images/263.jpg" width="120" height="120"></a>|
