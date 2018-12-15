@@ -339,6 +339,11 @@
  }
   .avatar {
     text-align: center;
+    align-items: center;
+  }
+  .team {
+    float: left;
+    text-align: center;
   }
   .text-img {
     text-align: center;

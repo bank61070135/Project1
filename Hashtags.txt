@@ -1,1 +1,1 @@
-{'#bnk48': 252, '#kaewbnk48': 82, '#mobilebnk48': 51, '#vfornatruja': 38, '#punbnk48': 31}
+{"#bnk48": 20, "#cherprangbnk48": 9, "#bnk48market": 8, "#noeybnk48": 6, "#weebnk48": 5}

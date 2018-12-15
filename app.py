@@ -48,10 +48,12 @@ class MyListener(StreamListener):
             results = df_hashtags.head(5)
             df = results.values.tolist()
             dict_json = {}
-            print(data)
             for i in df:
-                dict_json[i[0]] = i[1] 
-            with open('Hashtags.json', 'w', encoding='utf8') as f:
+                dict_json[i[0]] = i[1]
+            dict_json = str(dict_json)
+            dict_json = dict_json.replace("'", '"')
+            print(dict_json)
+            with open('Hashtags.txt', 'w', encoding='utf8') as f:
                 f.write(str(dict_json))
                 f.close()
             
