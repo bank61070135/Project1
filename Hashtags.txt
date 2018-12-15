@@ -1,1 +1,1 @@
-[['#kaimookbnk48', 2], ['#bnk48', 2]]
+{'#bnk48': 252, '#kaewbnk48': 82, '#mobilebnk48': 51, '#vfornatruja': 38, '#punbnk48': 31}

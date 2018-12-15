@@ -43,34 +43,18 @@ class MyListener(StreamListener):
                 else:
                     dict_hashtags[i][1] += 1
 
-            df_hashtags =  pd.DataFrame.from_dict(dict_hashtags, orient='index', columns=['hashtag', 'count'])
+            df_hashtags =  pd.DataFrame.from_dict(dict_hashtags, orient='index', columns=['hash', 'count'])
             df_hashtags = df_hashtags.sort_values(by='count', ascending=False)
             results = df_hashtags.head(5)
             df = results.values.tolist()
-            with open('Hashtags.txt', 'w', encoding='utf8') as f:
-                f.write(str(df))
+            dict_json = {}
+            print(data)
+            for i in df:
+                dict_json[i[0]] = i[1] 
+            with open('Hashtags.json', 'w', encoding='utf8') as f:
+                f.write(str(dict_json))
                 f.close()
-            style.use('fivethirtyeight')
             
-            fig = plt.figure()
-            ax1 = fig.add_subplot(1, 1, 1)
-
-            #print(results)
-            def animate(i):
-                graph_data = open('Hashtags.txt', 'r').read()
-                xs = []
-                ys = []
-                """for i in list(graph_data):
-                    print(i)
-                    xs.append(i[0])
-                    ys.append(i[1])"""
-                ax1.clear()
-                ax1.plot(xs, ys)
-
-            ani = animation.FuncAnimation(fig, animate, interval=1000)
-                
-            plt.show()
-                
         except BaseException as e:
             print("Error on_data: %s" % str(e))
         return True
