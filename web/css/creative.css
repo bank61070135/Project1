@@ -358,12 +358,15 @@ header.masthead p {
 
 
 .avatar {
-  margin-left: 40px;
+  margin-left: 20px;
 }
-
+.text-img {
+  margin-left: 70px;
+  font-family: 'Kanit', sans-serif;
+}
 img.user {
-  margin-left: 40px;
-  margin-right: 50px;
+  margin-left: 20px;
+  margin-right: 30px;
   height: 200px;
   width: 200px;
   background-color: #6fbcd2;
