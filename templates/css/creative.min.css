@@ -338,6 +338,7 @@
    font-family: 'Kanit', sans-serif;
  }
   .avatar {
+    margin-left: 20px;
     text-align: center;
     align-items: center;
   }
