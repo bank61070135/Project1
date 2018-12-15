@@ -1,1 +1,1 @@
-{"bnk48": 8, "kaewbnk48": 4, "ornbnk48": 4, "namneungbnk48": 3, "minminbnk48": 2}
+{"bnk48": 176, "cherprangbnk48": 54, "namneungbnk48": 41, "noeybnk48": 35, "kaewbnk48": 30}

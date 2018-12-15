@@ -4,9 +4,6 @@ from tweepy import OAuthHandler
 from tweepy import Stream
 import re
 import pandas as pd
-import matplotlib.pyplot as plt
-import matplotlib.animation as animation
-from matplotlib import style
 
 consumer_key = "3II162EiHwgcNCSV17YW0Ykof"
 consumer_secret = "CZonbTz3tao9tZkQVVCvQscf5Yml0ohV3H2n16JYktg4bY73z4"
