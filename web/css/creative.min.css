@@ -343,7 +343,11 @@
   .avatar {
     margin-left: 40px;
   }
-  
+  .text-img {
+    margin-left: 40px;
+    margin-right: 50px;
+    font-family: 'Kanit', sans-serif;
+  }
   img.user {
     margin-left: 40px;
     margin-right: 50px;
