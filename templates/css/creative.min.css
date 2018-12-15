@@ -183,7 +183,7 @@
  header.masthead {
    padding-top: 10rem;
    padding-bottom: calc(10rem - 56px);
-   background-image: url("../img/background.png");
+   background-image: url("../img/bg-2.jpg");
    background-position: center center;
    background-size: cover;
  }
