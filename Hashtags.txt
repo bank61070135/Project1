@@ -1,1 +1,1 @@
-{"bnk48": 14, "namneungbnk48": 8, "mobilebnk48": 6, "cherprangbnk48": 4, "akimotosayaka": 3}
+{"bnk48": 3122, "namneungbnk48": 597, "cherprangbnk48": 530, "kaewbnk48": 482, "weebnk48": 413}

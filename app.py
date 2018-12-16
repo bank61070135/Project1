@@ -51,7 +51,7 @@ class MyListener(StreamListener):
             dict_json = str(dict_json)
             dict_json = dict_json.replace("'", '"')
             print(dict_json)
-            with open('Hashtags.json', 'w', encoding='utf8') as f:
+            with open('Hashtags.txt', 'w', encoding='utf8') as f:
                 f.write(str(dict_json))
                 f.close()
             
