@@ -1,8 +1,7 @@
-<!DOCTYPE html>
-<meta charset="utf-8">
 <html>
    <head>
     <title>Google Charts Tutorial</title>
+    <meta charset="utf-8">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -16,7 +15,7 @@
       document.getElementById("data").innerHTML = JSON.stringify(myObj);
       }
       };
-      xmlhttp.open("GET", "Hashtags.txt", true);
+      xmlhttp.open("GET", "http://127.0.0.1:5000/count", true);
       xmlhttp.send();
       </script>
 
