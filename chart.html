@@ -1,22 +1,21 @@
 <html>
    <head>
     <title>Google Charts Tutorial</title>
-    <meta charset="utf-8">
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
    </head>
    <body>
       <script>
-      var xmlhttp = new XMLHttpRequest();
-      xmlhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-      var myObj = JSON.parse(this.responseText);
-      document.getElementById("data").innerHTML = JSON.stringify(myObj);
-      }
-      };
-      xmlhttp.open("GET", "http://127.0.0.1:5000/count", true);
-      xmlhttp.send();
+      $.ajax({
+      url: "Hashtags.txt",
+      dataType: "text",
+      success: function(data) {
+      var json = $.parseJSON(data);
+      console.log(json);
+      document.getElementById('data').innerHTML = JSON.stringify(json);
+    }
+});
+</script>
       </script>
 
       <div id="data"></div>
