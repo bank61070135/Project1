@@ -7,15 +7,54 @@
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
    </head>
    <body>
-      <script>
-      $.getJSON('http://api.oceandrivers.com/static/resources.json', function(res){
-      var json = JSON.stringify(res);
-      document.getElementById('data').innerHTML = json;
-      })
+   <script>
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart(){
+      $.ajax({
+      url: "Hashtags.txt",
+      dataType: "text",
+      success: function(data) {
+      var json = $.parseJSON(data);
+      var number = [];
+      var name = [];
+      for(var key in json){
+         var value = json[key];
+         name.push(key);
+         number.push(value);
+      }
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'Hashtag');
+      data.addColumn('number', 'Value');
+      data.addRows([
+      [name[0], number[0]],
+      [name[1], number[1]],
+      [name[2], number[2]],
+      [name[3], number[3]],
+      [name[4], number[4]]
+      ]);
+      var options = {'title':'Hashtag twitter',
+                       'width':400,
+                       'height':300};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(document.getElementById('data'));
+        chart.draw(data, options);
+
+    }
+});
+      }
+
 </script>
       
 
       <div id="data"></div>
+      <div>
+         <form name="search" action="app.py" method="get">
+            Hashtag: <input type="text" name="searchbox">
+            <input type="submit" value="ค้นหา">
+         </form>
+      </div>
 
    </body>
 </html>
