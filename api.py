@@ -1,5 +1,6 @@
 from flask import Flask
 from flask_restful import Resource, Api
+
 app = Flask(__name__)
 data = open('Hashtags.txt', 'r').read()
 

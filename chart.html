@@ -7,7 +7,7 @@
    <body>
       <script>
       $.ajax({
-      url: "Hashtags.txt",
+      url: " http://127.0.0.1:5000/count",
       dataType: "text",
       success: function(data) {
       var json = $.parseJSON(data);
@@ -16,8 +16,6 @@
     }
 });
 </script>
-      </script>
-
       <div id="data"></div>
 
    </body>
