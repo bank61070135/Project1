@@ -4,10 +4,6 @@ from tweepy import OAuthHandler
 from tweepy import Stream
 import re
 import pandas as pd
-import cgi
-
-form = cgi.FieldStorage()
-search =  form.getvalue('searchbox')
 
 consumer_key = "3II162EiHwgcNCSV17YW0Ykof"
 consumer_secret = "CZonbTz3tao9tZkQVVCvQscf5Yml0ohV3H2n16JYktg4bY73z4"
@@ -68,5 +64,5 @@ class MyListener(StreamListener):
 
 if __name__ == "__main__":
     stream = Stream(auth, MyListener())
-    stream.filter(track=[search])
+    stream.filter(track=['#bnk48'])
             
