@@ -1,1 +1,1 @@
-{"bnk48": 3122, "namneungbnk48": 597, "cherprangbnk48": 530, "kaewbnk48": 482, "weebnk48": 413}
+{"bnk48": 40, "punbnk48": 25, "cherprangbnk48": 9, "justpun": 8, "musicbnk48": 7}
