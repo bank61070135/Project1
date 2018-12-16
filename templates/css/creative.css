@@ -55,11 +55,6 @@ h6 {
   background-color: #212529 !important;
 }
 
-.text-header{
-  text-shadow: rgba(33, 37, 41, 0.1);
-
-}
-
 .text-faded {
   color: rgba(255, 255, 255, 0.7);
 }
@@ -201,7 +196,7 @@ img::-moz-selection {
 header.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 56px);
-  background-image: url("../img/bg-2.jpg");
+  background-image: url("../img/bg-3.jpg");
   background-position: center center;
   background-size: cover;
 }
@@ -248,9 +243,6 @@ header.masthead p {
   max-width: 400px;
 }
 
-.text-header{
-  text-shadow: #212529;
-}
 .portfolio-box {
   position: relative;
   display: block;
@@ -332,7 +324,7 @@ header.masthead p {
 }
 
 .btn-primary {
-  background-color: #6fbcd2;
+  background-color: #add7e2;
   border-color: #6fbcd2;
 }
 
@@ -349,13 +341,76 @@ header.masthead p {
   box-shadow: 0 0 0 0.2rem rgba(240, 95, 64, 0.5) !important;
 }
 
-.row {
-  padding: 20px 20px 20px 20px;
-  background-position: center center;
-  background-size: cover;
-  background-color: #ee4b28;
+#footer {
+  background-color: #212529;
+  text-align: right;
+  padding-right: 30px;
+  height: 20%;
+  color: white;
+  font-family: 'Kanit', sans-serif;
 }
-.text-box {
-  margin: 0 auto;
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+
+#footer2 {
+  background-color: #fff;
+  text-align: center;
+  height: 125%;
+  color: #212529;
+  font-family: 'Kanit', sans-serif;
+}
+
+
+.avatar {
+  text-align: center;
+}
+.text-img {
+  text-align: center;
+  font-family: 'Kanit', sans-serif;
+}
+img.user {
+  margin-left: 20px;
+  margin-right: 30px;
+  height: 200px;
+  width: 200px;
+  background-color: #6fbcd2;
+  ;
+  box-shadow: 0 0 0 5px #6fbcd2;
+  ;
+  border-radius: 50%;
+}
+
+@keyframes bounceOut {
+  0% {
+    box-shadow: 0 0 0 4px #6fbcd2;
+    ;
+    opacity: 1;
+  }
+
+  25% {
+    box-shadow: 0 0 0 1px #6fbcd2;
+    ;
+    opacity: 1;
+  }
+
+  50% {
+    box-shadow: 0 0 0 7px #6fbcd2;
+    ;
+    opacity: 1;
+  }
+
+  75% {
+    box-shadow: 0 0 0 4px #6fbcd2;
+    ;
+    opacity: 1;
+  }
+
+  100% {
+    box-shadow: 0 0 0 5px #6fbcd2;
+    ;
+    opacity: 1;
+  }
+}
+
+img.user:hover {
+  cursor: pointer;
+  animation: bounceOut .4s linear;
 }
