@@ -401,6 +401,10 @@
     cursor: pointer; 
     animation:bounceOut .4s linear;
   }
-.head-fonts {
+#head-fonts {
     font-family: 'VT323', monospace;
+  }
+
+  .text-tool {
+    font-family: 'Mukta', sans-serif;
   }
