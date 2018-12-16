@@ -1,1 +1,0 @@
-{"bnk48": 149, "siwon": 57, "2pm": 57, "mobilebnk48": 27, "musicbnk48": 24}
