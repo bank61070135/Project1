@@ -8,17 +8,12 @@
    </head>
    <body>
       <script>
-      $.ajax({
-      url: "Hashtags.txt",
-      dataType: "text",
-      success: function(data) {
-      var json = $.parseJSON(data);
-      console.log(json);
-      document.getElementById('data').innerHTML = JSON.stringify(json);
-    }
-});
+      $.getJSON('http://api.oceandrivers.com/static/resources.json', function(res){
+      var json = JSON.stringify(res);
+      document.getElementById('data').innerHTML = json;
+      })
 </script>
-      </script>
+      
 
       <div id="data"></div>
 
