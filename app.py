@@ -5,6 +5,8 @@ from tweepy import Stream
 import re
 import pandas as pd
 
+text
+
 consumer_key = "3II162EiHwgcNCSV17YW0Ykof"
 consumer_secret = "CZonbTz3tao9tZkQVVCvQscf5Yml0ohV3H2n16JYktg4bY73z4"
 access_token = "1349083645-NoM2NjgwsSqPPrT3DN8PgKMa4VFV8VGpV7qVX1H"
@@ -42,7 +44,7 @@ class MyListener(StreamListener):
 
             df_hashtags =  pd.DataFrame.from_dict(dict_hashtags, orient='index', columns=['hash', 'count'])
             df_hashtags = df_hashtags.sort_values(by='count', ascending=False)
-            results = df_hashtags.head(5)
+            results = df_hashtags.head()
             df = results.values.tolist()
             dict_json = {}
             for i in df:
@@ -50,7 +52,7 @@ class MyListener(StreamListener):
                 dict_json[i[0]] = i[1]
             dict_json = str(dict_json)
             dict_json = dict_json.replace("'", '"')
-            print(dict_json)
+            print(data)
             with open('Hashtags.txt', 'w', encoding='utf8') as f:
                 f.write(str(dict_json))
                 f.close()

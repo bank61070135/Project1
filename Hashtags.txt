@@ -1,1 +1,1 @@
-{"bnk48": 99, "musicbnk48": 25, "cherprangbnk48": 22, "namneungbnk48": 16, "weebnk48": 13}
+{"bnk48": 149, "siwon": 57, "2pm": 57, "mobilebnk48": 27, "musicbnk48": 24}
