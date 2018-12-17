@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <html>
    <head>
-    <title>Google Charts Tutorial</title>
+    <title>Twitter charts</title>
+    <link rel="icon" href="https://cdn2.iconfinder.com/data/icons/minimalism/512/twitter.png">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
    </head>
@@ -33,22 +35,20 @@
       ]);
       var options = {'title':'Hashtag twitter',
                        'width':1000,
-                       'height':300};
-
+                       'height':300,
+                       legend:{position: 'bottom'},
+      };
         var chart = new google.visualization.ColumnChart(document.getElementById('data'));
         chart.draw(data, options);
+        
     }
+});
+$(window).resize(function(){
+   drawChart();
 });
       }
 
 </script>
-      <div id="data"></div>
-      <!--<div>
-         <form name="search" action="app.py" method="get">
-            Hashtag: <input type="text" name="searchbox">
-            <input type="submit" value="ค้นหา"> 
-         </form> 
-      </div>-->
-
+     <div id="data"></div>
    </body>
 </html>
