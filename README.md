@@ -16,7 +16,7 @@
  ## 💡 การทำงานเบื้องต้น
  
  <p>
-<img src="http://www.metalbridges.com/wp-content/uploads/2018/10/bnk-festival-general-election-1.jpg" >
+<img src="https://www.bnk48.com/data/Slidebanners/1/img_resize/113351djlny8.png" >
 </p>
 
 
