@@ -49,6 +49,11 @@
 </p>
 
 
+- Goodbye ❤️❤️❤️
+<p>
+<img src="https://github.com/bank61070135/Project1/blob/arm/images/tain/love.png" >
+</p>
+
 ## สมาชิกในทีม!
 |<a href=""><img src="https://github.com/bank61070135/Project1/blob/master/images/063.jpg" width="120" height="120"></a>|<a href=""><img src="https://github.com/bank61070135/Project1/blob/master/images/135.jpg" width="120" height="120"></a>|<a href=""><img src="https://github.com/bank61070135/Project1/blob/master/images/155.jpg" width="120" height="120"></a>|<a href=""><img src="https://github.com/bank61070135/Project1/blob/master/images/263.jpg" width="120" height="120"></a>|
 |:-------------:|:-------------:|:-------------:|:-------------:|
