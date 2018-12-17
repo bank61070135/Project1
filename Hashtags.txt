@@ -1,1 +1,1 @@
-{"bnk48": 389, "mobilebnk48": 151, "cherprangbnk48": 113, "kaewbnk48": 81, "punbnk48": 77}
+{"bnk48": 28, "cherprangbnk48": 14, "jennisbnk48": 11, "allforcher": 7, "cheristheone": 6}
