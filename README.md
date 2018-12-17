@@ -22,6 +22,7 @@
 | [@delldolly](https://github.com/delldolly) | [@bank61070135](https://github.com/bank61070135) | [@pythhh](https://github.com/pythhh) | [@bestculling](https://github.com/bestculling)   
 
 
+[![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com) 
 
 ## 🔗 อ้างอิง
  - [Tweepy](http://www.tweepy.org/)
