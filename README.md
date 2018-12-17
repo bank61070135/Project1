@@ -13,6 +13,21 @@
   - Tweepy + Pandas
   - ดึง Api จาก Twitter เพื่อนำมาสร้างเป็นไฟล์ Json data
 
+ ## 💡 การทำงานเบื้องต้น
+ - ทำการใส่ "คำ" ที่คุณสนใจใน Enter you Hashtags ==> จากตัวอย่างเราใช้คำว่า "BNK48" ❤️❤️❤️
+ <p>
+<img src="https://github.com/bank61070135/Project1/blob/arm/images/tain/input.png" >
+</p>
+
+
+
+ - จากนั้นเเล้วก็จะรันหน้าเว็ป REALTIME IN TWITTER DATA ANALYSIS ที่สวยงาม 🖥️🖥️🖥️
+ <p>
+<img src="https://github.com/bank61070135/Project1/blob/arm/images/tain/index.png" >
+</p>
+
+
+
 
 ## สมาชิกในทีม!
 |<a href=""><img src="https://github.com/bank61070135/Project1/blob/master/images/063.jpg" width="120" height="120"></a>|<a href=""><img src="https://github.com/bank61070135/Project1/blob/master/images/135.jpg" width="120" height="120"></a>|<a href=""><img src="https://github.com/bank61070135/Project1/blob/master/images/155.jpg" width="120" height="120"></a>|<a href=""><img src="https://github.com/bank61070135/Project1/blob/master/images/263.jpg" width="120" height="120"></a>|
