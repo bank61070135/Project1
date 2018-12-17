@@ -414,3 +414,22 @@ img.user:hover {
   cursor: pointer;
   animation: bounceOut .4s linear;
 }
+.text-tool {
+  font-family: 'Mukta', sans-serif;
+}
+.text-des {
+  font-family: 'Kanit', sans-serif;
+  color: white;
+  text-align: center;
+}
+
+.sum {
+  font-family: 'Mukta', sans-serif;
+  color: white;
+}
+
+.line {
+  text-align: center;
+  font-family: 'Kanit', sans-serif;
+  color: #212529;
+}

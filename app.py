@@ -10,7 +10,7 @@ import time
 from time import gmtime, strftime
 
 """<=== Input Hashtags ===>"""
-Your_hashtags = input("Enter you Hashtags ==> ")
+Your_hashtags = input("Enter your Hashtags ==> ")
 
 """<=== Open index.html in webbrowser ===>"""
 time.sleep(1)

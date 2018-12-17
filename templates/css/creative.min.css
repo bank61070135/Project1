@@ -408,3 +408,14 @@
   .text-tool {
     font-family: 'Mukta', sans-serif;
   }
+  .text-des {
+    font-family: 'Kanit', sans-serif;
+    color: white;
+    text-align: center;
+  }
+
+  #line {
+    text-align: center;
+    font-family: 'Kanit', sans-serif;
+    color: #212529;
+  }
