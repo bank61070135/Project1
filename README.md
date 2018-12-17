@@ -24,6 +24,6 @@
 
 
 ## 🔗 อ้างอิง
- [Tweepy](http://www.tweepy.org/)
- [Pandas](https://pandas.pydata.org/)
- [Google Charts](https://developers.google.com/chart/)
+ - [Tweepy](http://www.tweepy.org/)
+ - [Pandas](https://pandas.pydata.org/)
+ - [Google Charts](https://developers.google.com/chart/)
