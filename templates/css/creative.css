@@ -324,21 +324,21 @@ header.masthead p {
 }
 
 .btn-primary {
-  background-color: #add7e2;
-  border-color: #6fbcd2;
+  background-color: #6abbcf;
+  border-color: #2fafd3;
 }
 
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active {
   color: #fff;
-  background-color: #ee4b28 !important;
+  background-color: #89d6eb !important;
 }
 
 .btn-primary:active,
 .btn-primary:focus {
-  -webkit-box-shadow: 0 0 0 0.2rem #6fbcd2 !important;
-  box-shadow: 0 0 0 0.2rem #6fbcd2 !important;
+  -webkit-box-shadow: 0 0 0 0.2rem #89d6eb !important;
+  box-shadow: 0 0 0 0.2rem #89d6eb !important;
 }
 
 #footer {
