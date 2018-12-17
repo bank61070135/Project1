@@ -50,5 +50,13 @@ $(window).resize(function(){
 
 </script>
      <div id="data"></div>
+     <script src="jquery.min.js"></script>
+     <script>
+     var auto_refresh = setInterval(
+     function()
+     {
+     $('#data').load('#data');
+     }, 1000);
+     </script>
    </body>
 </html>

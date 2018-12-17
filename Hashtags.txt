@@ -1,0 +1,1 @@
+{"bnk48": 475, "jennisbnk48": 148, "cherprangbnk48": 122, "mobilebnk48": 90, "kaewbnk48": 89}
