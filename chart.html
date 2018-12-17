@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <html>
    <head>
-    <title>Google Charts Tutorial</title>
+    <title>Twitter charts</title>
+    <link rel="icon" href="https://cdn2.iconfinder.com/data/icons/minimalism/512/twitter.png">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
    </head>
@@ -25,32 +27,28 @@
       }
       var data = new google.visualization.arrayToDataTable([
          ['Hashtag', 'ความนิยม', { role: 'style' }],
-         ["#" + name[0], number[0], '#b87333'],            // RGB value
-         ["#" + name[1], number[1], 'silver'],            // English color name
-         ["#" + name[2], number[2], 'gold'],
-         ["#" + name[3], number[3], 'gold'],
-         ["#" + name[4], number[4], 'color: #e5e4e2' ], // CSS-style declaration
+         ["#" + name[0], number[0], '#6FBCD2'],            
+         ["#" + name[1], number[1], '#69A19C'],            
+         ["#" + name[2], number[2], '#536474'],
+         ["#" + name[3], number[3], '#5B6C84'],
+         ["#" + name[4], number[4], '#1A1620' ], 
       ]);
       var options = {'title':'Hashtag twitter',
-                       'width':800,
-                       'height':300};
-
-        // Instantiate and draw our chart, passing in some options.
+                       'width':1000,
+                       'height':300,
+                       legend:{position: 'bottom'},
+      };
         var chart = new google.visualization.ColumnChart(document.getElementById('data'));
         chart.draw(data, options);
-
+        
     }
+});
+$(window).resize(function(){
+   drawChart();
 });
       }
 
 </script>
-      <div id="data"></div>
-      <div>
-         <form name="search" action="app.py" method="get">
-            Hashtag: <input type="text" name="searchbox">
-            <input type="submit" value="ค้นหา">
-         </form>
-      </div>
-
+     <div id="data"></div>
    </body>
 </html>
