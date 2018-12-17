@@ -48,7 +48,6 @@
 <img src="https://github.com/bank61070135/Project1/blob/arm/images/tain/reback.png" >
 </p>
 
-
 - Goodbye ❤️❤️❤️
 <p>
 <img src="https://github.com/bank61070135/Project1/blob/arm/images/tain/love.png" >
