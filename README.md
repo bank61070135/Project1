@@ -19,4 +19,11 @@
 |:-------------:|:-------------:|:-------------:|:-------------:|
 | 61070037      | 61070135      | 61070155      | 61070263      |
 | Charinrat     | Patcharapuek  | Pattaranan    | Akkrapol      |
+|    
 
+
+
+## 🔗 อ้างอิง
+ [Tweepy](http://www.tweepy.org/)
+ [Pandas](https://pandas.pydata.org/)
+ [Google Charts](https://developers.google.com/chart/)
