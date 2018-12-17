@@ -9,54 +9,54 @@
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
    </head>
    <body>
-   <script>
-      google.charts.load("current", {packages:["corechart"]});
-      google.charts.setOnLoadCallback(drawChart);
-      function drawChart(){
-      $.ajax({
-      url: "Hashtags.txt",
-      dataType: "text",
-      success: function(data) {
-      var json = $.parseJSON(data);
-      var number = [];
-      var name = [];
-      for(var key in json){
-         var value = json[key];
-         name.push(key);
-         number.push(value);
-      }
-      var data = new google.visualization.arrayToDataTable([
-         ['Hashtag', 'ความนิยม', { role: 'style' }],
-         ["#" + name[0], number[0], '#6FBCD2'],            
-         ["#" + name[1], number[1], '#69A19C'],            
-         ["#" + name[2], number[2], '#536474'],
-         ["#" + name[3], number[3], '#5B6C84'],
-         ["#" + name[4], number[4], '#1A1620' ], 
-      ]);
-      var options = {'title':'Hashtag twitter',
+      <script>
+        google.charts.load("current", {packages:["corechart"]});
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart(){
+        $.ajax({
+        url: "Hashtags.txt",
+        dataType: "text",
+        success: function(data) {
+        var json = $.parseJSON(data);
+        var number = [];
+        var name = [];
+        for(var key in json){
+          var value = json[key];
+          name.push(key);
+          number.push(value);
+        }
+        var data = new google.visualization.arrayToDataTable([
+          ['Hashtag', 'ความนิยม', { role: 'style' }],
+          ["#" + name[0], number[0], '#6FBCD2'],            
+          ["#" + name[1], number[1], '#69A19C'],            
+          ["#" + name[2], number[2], '#536474'],
+          ["#" + name[3], number[3], '#5B6C84'],
+          ["#" + name[4], number[4], '#1A1620' ], 
+        ]);
+        var options = {'title':'Hashtag twitter',
                        'width':1000,
                        'height':300,
                        legend:{position: 'bottom'},
-      };
+        };
         var chart = new google.visualization.ColumnChart(document.getElementById('data'));
         chart.draw(data, options);
         
-    }
-});
-$(window).resize(function(){
-   drawChart();
-});
-      }
+        }
+        });
+        $(window).resize(function(){
+        drawChart();
+        });
+        }
 
-</script>
-     <div id="data"></div>
-     <script src="jquery.min.js"></script>
-     <script>
-     var auto_refresh = setInterval(
-     function()
-     {
-     $('#data').load('#data');
-     }, 1000);
-     </script>
+      </script>
+      <div id="data"></div>
+      <script src="jquery.min.js"></script>
+      <script>
+      var auto_refresh = setInterval(
+      function()
+      {
+      $('#data').load('#data');
+      }, 1000);
+      </script>
    </body>
 </html>
