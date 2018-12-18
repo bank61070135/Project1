@@ -32,7 +32,7 @@
 </p>
 
 
-- เมื่อเลื่อนลงมาจะเจอส่วนของ Chart จากนั้นคลิ๊ก OPEN NOW! เย้ๆ ❤️❤️❤️
+- เมื่อเลื่อนลงมาจะเจอส่วนของ Summary จากนั้นคลิ๊ก OPEN NOW! เย้ๆ ❤️❤️❤️
  <p>
 <img src="https://github.com/bank61070135/Project1/blob/master/images/summary.jpg" >
 </p>
