@@ -28,7 +28,7 @@
 
  - จากนั้นเเล้วก็จะรันหน้าเว็ป REALTIME IN TWITTER DATA ANALYSIS ที่สวยงาม 🖥️🖥️🖥️
  <p>
-<img src="https://github.com/bank61070135/Project1/images/home.PNG" >
+<img src="https://github.com/bank61070135/Project1/blob/arm/images/tain/index.png" >
 </p>
 
 
